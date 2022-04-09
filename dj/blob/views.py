@@ -31,3 +31,6 @@ def post_detail(request, pk):
                    'comments':comments,
                    'form':form})
     return page
+class PostViewSet(viewsets.ModelViewSet):
+    queryset = Post.objects.all()
+    serializer class = PostSerializer
